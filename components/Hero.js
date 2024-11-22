@@ -46,9 +46,10 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'row', // Default to row layout
-    alignItems: 'center', // Align items vertically
+    alignItems: 'flex-start', // Align items to the left on large screens
     margin: '16px 0',
     flexWrap: 'wrap', // Allow wrapping on small screens
+    textAlign: 'left', // Ensure text is left-aligned
   },
   imageWrapper: {
     width: '100%', // Default to 100% width for flexibility
@@ -68,12 +69,16 @@ const styles = {
     flexDirection: 'column',
     flex: 1, // Allow this section to grow or shrink
     width: '100%', // Ensure it spans the available width
+    alignItems: 'flex-start', // Ensure all child elements align to the left
+    textAlign: 'left', // Ensure text is left-aligned
   },
   infoRow: {
     display: 'flex',
     alignItems: 'center',
     marginBottom: '8px',
     flexWrap: 'wrap', // Ensure text wraps on smaller screens
+    justifyContent: 'flex-start', // Align content to the left
+    width: '100%', // Full width for flex row
   },
   icon: {
     marginRight: '8px',
@@ -83,20 +88,22 @@ const styles = {
     fontSize: '1.5em', // Use relative units for scalability
     fontWeight: 'bold',
     marginBottom: '8px',
-    textAlign: 'center', // Center-align on smaller screens
-  },
-  info: {
-    fontSize: '1em',
-    color: '#555',
+    textAlign: 'left', // Left-align name text
+    alignSelf: 'flex-start', // Ensure name aligns left in its container
+    width: '100%', // Ensure name takes full width
   },
   description: {
-    fontSize: '1.1em',
+    fontSize: '1.2em',
     color: '#444',
-    textAlign: 'center',
+    textAlign: 'left', // Left-align description text
+    alignSelf: 'flex-start', // Align description left
+    width: '100%', // Ensure description takes full width
+    fontStyle: 'italic',
   },
   button: {
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'flex-start', // Align button content to the left
     backgroundColor: '#4CAF50',
     color: '#fff',
     padding: '10px', // Adjust padding for better touch targets
@@ -105,61 +112,85 @@ const styles = {
     fontSize: '1em',
     marginTop: '16px',
     cursor: 'pointer',
-    justifyContent: 'center', // Center button content
-    width: 'auto', // Allow button to shrink if needed
-    maxWidth: '200px', // Restrict maximum button width
+    width: 'auto',
+    maxWidth: '250px', // Restrict max button width
     whiteSpace: 'nowrap',
+    alignSelf: 'flex-start', // Align button to the left
   },
   buttonIcon: {
-    marginRight: '6px',
+    marginRight: '6px', // Space between icon and text
   },
 
   '@media (max-width: 768px)': {
     container: {
       flexDirection: 'column', // Stack items vertically
-      alignItems: 'center', // Center-align content horizontally
-      textAlign: 'center', // Center text content
+      alignItems: 'flex-start', // Align items to the left on small screens
+      textAlign: 'left', // Align text to the left
+      padding: '16px', // Add padding for spacing
     },
     imageWrapper: {
       marginRight: '0', // Remove side margin
       marginBottom: '16px', // Add space below the image
-      display: 'flex', // Ensure flex alignment
-      justifyContent: 'center',
+      display: 'flex',
+      justifyContent: 'flex-start', // Align image to the left
+      width: '100%', // Full width for the image wrapper
     },
     infoContainer: {
-      alignItems: 'center', // Center-align text
-      width: '100%', // Allow full width
-      textAlign: 'center', // Center the text inside
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start', // Align items to the left
+      textAlign: 'left', // Ensure text is left-aligned
+      flex: 1,
+      width: '100%', // Allow it to span full width
     },
     name: {
-      fontSize: '1.3em', // Slightly smaller font for smaller screens
-      textAlign: 'center', // Explicitly center text
-    },
-    infoRow: {
-      display: 'flex', // Ensure flexibility
-      flexDirection: 'column', // Stack icons and text vertically
-      alignItems: 'center', // Center-align each row
-      textAlign: 'center', // Center text inside
-      marginBottom: '8px', // Add spacing between rows
+      fontSize: '1.5em',
+      fontWeight: 'bold',
+      marginBottom: '8px',
+      textAlign: 'left', // Explicitly left-align text
+      alignSelf: 'flex-start', // Align name to the left
+      width: '100%', // Ensure name takes full width
     },
     description: {
-      fontSize: '1.1em', // Ensure readability
-      textAlign: 'center', // Center description text
+      fontSize: '1.1em',
+      color: '#444',
+      textAlign: 'left', // Left-align the description text
+      marginBottom: '16px',
+      alignSelf: 'flex-start', // Align description to the left
+      width: '100%', // Ensure description takes full width
+    },
+    infoRow: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'flex-start', // Align icons and text to the left
+      alignItems: 'center',
+      marginBottom: '8px',
+      flexWrap: 'wrap', // Wrap text/icon on small screens
+      alignSelf: 'flex-start', // Ensure this row is aligned to the left
     },
     button: {
-      display: 'flex', // Flexbox for proper alignment
-      justifyContent: 'center', // Center-align button content
+      display: 'flex',
       alignItems: 'center',
-      width: '100%', // Make the button span full width
-      maxWidth: '250px', // Optional: Restrict max width to avoid stretching
+      justifyContent: 'flex-start', // Align button content to the left
+      backgroundColor: '#4CAF50',
+      color: '#fff',
+      padding: '10px',
+      borderRadius: '12px',
+      textDecoration: 'none',
+      fontSize: '1em',
       marginTop: '16px',
-      textAlign: 'center', // Center text inside the button
+      cursor: 'pointer',
+      width: 'auto',
+      maxWidth: '250px',
+      whiteSpace: 'nowrap',
+      alignSelf: 'flex-start', // Align button to the left
     },
     buttonIcon: {
       marginRight: '6px', // Space between icon and text
     },
-  },
+  }
 };
+
 
 Hero.propTypes = {
   imageSrc: PropTypes.string.isRequired,

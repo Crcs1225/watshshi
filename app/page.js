@@ -27,8 +27,8 @@ export default function Home() {
   ];
   
   const projects = [
-    { title: 'Kitchen Helper', description: 'Thesis' },
-    { title: 'Panitik', description: 'Software Engineering' },
+    { title: 'Kitchen Helper', description: 'AI with Recommendation System' },
+    { title: 'Panitik', description: 'Book Application INtegrated with Gemini Model' },
     { title: 'Library Reservation App', description: 'Freelance Project' },
   ];
   
