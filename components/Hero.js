@@ -8,7 +8,7 @@ const Hero = ({ imageSrc, name, location, email, description }) => {
       <div style={styles.imageWrapper}>
         <Image
           src={imageSrc}
-          alt={`${name}'s picture`}
+          alt={`${name} picture`}
           width={200}
           height={200}
           style={styles.image}
