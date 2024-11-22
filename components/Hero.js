@@ -100,6 +100,20 @@ const styles = {
   buttonIcon: {
     marginRight: '6px', // Adjust spacing between icon and text
   },
+   // Media query for small screens
+   '@media (max-width: 768px)': {
+    container: {
+      flexDirection: 'column', // Change layout to column on small screens
+      textAlign: 'center', // Center text on small screens
+    },
+    imageWrapper: {
+      marginRight: '0', // Remove right margin when in column layout
+      marginBottom: '16px', // Add spacing between image and text
+    },
+    infoContainer: {
+      alignItems: 'center', // Center the text on small screens
+    },
+  },
 };
 
 Hero.propTypes = {
