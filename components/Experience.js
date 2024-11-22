@@ -35,7 +35,7 @@ const styles = {
     padding: '24px',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
     margin: '16px auto',
-    maxWidth: '700px',
+    width: '100%',
     backgroundColor: '#fff',
     height: '100%',
   },

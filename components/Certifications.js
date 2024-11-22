@@ -3,28 +3,23 @@ import PropTypes from 'prop-types';
 import { FaCertificate } from 'react-icons/fa';
 
 const Certifications = ({ certifications }) => (
-  <div style={styles.container}>
-    <div style={styles.card}>
-      {/* Header with Icon and View All link */}
-      <div style={styles.header}>
-        <h2 style={styles.heading}>
-          <FaCertificate style={styles.icon} /> {/* Icon before title */}
-          Certifications
-        </h2>
-        <a href="/certifications" style={styles.viewAll}>
-          View All
-        </a>
-      </div>
+  <div style={styles.card}>
+    <div style={styles.header}>
+      <h2 style={styles.heading}>
+        <FaCertificate style={styles.icon} /> Certifications
+      </h2>
+      <a href="/certifications" style={styles.viewAll}>
+        View All
+      </a>
+    </div>
 
-      {/* List of Certifications */}
-      <div style={styles.certificationsContainer}>
-        {certifications.map((certification, index) => (
-          <div key={index} style={styles.certificationCard}>
-            <h3 style={styles.certificationTitle}>{certification.title}</h3>
-            <p style={styles.certificationDescription}>{certification.description}</p>
-          </div>
-        ))}
-      </div>
+    <div style={styles.certificationsContainer}>
+      {certifications.map((certification, index) => (
+        <div key={index} style={styles.certificationCard}>
+          <h3 style={styles.certificationTitle}>{certification.title}</h3>
+          <p style={styles.certificationDescription}>{certification.description}</p>
+        </div>
+      ))}
     </div>
   </div>
 );
@@ -39,38 +34,30 @@ Certifications.propTypes = {
 };
 
 const styles = {
-  container: {
-    padding: '16px',
+  card: {
+    border: '1px solid #ddd',
+    borderRadius: '8px',
+    padding: '24px',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    margin: '16px auto',
     width: '100%',
-    margin: 'auto',
-    display: 'flex',
-    justifyContent: 'center',
+    backgroundColor: '#fff',
     height: '100%',
   },
-  card: {
-    backgroundColor: '#fff',
-    borderRadius: '8px',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    padding: '24px',
-    marginBottom: '24px',
-  },
   header: {
-    marginBottom: '24px',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    marginBottom: '16px',
   },
   heading: {
-    fontSize: '24px',
+    fontSize: '20px',
     fontWeight: 'bold',
-    color: '#333',
-    margin: 0,
     display: 'flex',
     alignItems: 'center',
   },
   icon: {
     marginRight: '8px',
-    fontSize: '24px',
     color: '#4CAF50',
   },
   viewAll: {
@@ -78,30 +65,26 @@ const styles = {
     color: '#4CAF50',
     textDecoration: 'none',
     cursor: 'pointer',
-    transition: 'color 0.3s ease',
   },
   certificationsContainer: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '16px',
+    gap: '12px',
   },
   certificationCard: {
+    padding: '12px',
     backgroundColor: '#f9f9f9',
-    borderRadius: '8px',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    padding: '16px',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
+    borderRadius: '6px',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
   },
   certificationTitle: {
     fontSize: '16px',
     fontWeight: 'bold',
-    marginBottom: '8px',
+    marginBottom: '4px',
   },
   certificationDescription: {
     fontSize: '14px',
-    color: '#777',
+    color: '#555',
   },
 };
 
