@@ -57,7 +57,7 @@ export default function Home() {
                   I am an intern and a graduating Computer Science student passionate about leveraging technology to solve real-world problems. My expertise spans Flutter, Data Science, Machine Learning, Object Detection, and Recommendation Systems. I have built native applications and love using AI and programming to create innovative solutions. I thrive in collaborative environments and am always seeking opportunities to learn and grow.
                 </p>
                 <p style={styles.paragraph}>
-                  Through my academic journey and hands-on projects, I have gained experience with tools like TensorFlow, YOLO, Firebase, and Python. I've worked on recommendation systems and AI-based applications that make a tangible impact. I am excited to continue advancing my skills and contribute to meaningful projects in the tech industry.
+                  Through my academic journey and hands-on projects, I have gained experience with tools like TensorFlow, YOLO, Firebase, and Python. I have worked on recommendation systems and AI-based applications that make a tangible impact. I am excited to continue advancing my skills and contribute to meaningful projects in the tech industry.
                 </p>
               </>
             }
