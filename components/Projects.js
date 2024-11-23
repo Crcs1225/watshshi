@@ -2,16 +2,16 @@
 
 import PropTypes from 'prop-types';
 import { FaProjectDiagram } from 'react-icons/fa';
-
+import Link from 'next/link';
 const Projects = ({ projects }) => (
   <div style={styles.card}>
     <div style={styles.header}>
       <h2 style={styles.heading}>
         <FaProjectDiagram style={styles.icon} /> Projects
       </h2>
-      <a href="/projects" style={styles.viewAll}>
+      <Link href="/projects" style={styles.viewAll}>
         View All
-      </a>
+      </Link>
     </div>
 
     <div style={styles.projectsContainer}>
@@ -52,12 +52,13 @@ const styles = {
     marginBottom: '16px',
   },
   heading: {
-    fontSize: '20px',
+    fontSize: '24px',
     fontWeight: 'bold',
     display: 'flex',
     alignItems: 'center',
   },
   icon: {
+    fontSize: '24px',
     marginRight: '8px',
     color: '#4CAF50',
   },

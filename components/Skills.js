@@ -35,7 +35,7 @@ const styles = {
     marginBottom: '16px',
   },
   icon: {
-    fontSize: '32px', // Adjust icon size
+    fontSize: '24px', // Adjust icon size
     color: '#4CAF50', // Set the icon color
     marginRight: '16px',
   },

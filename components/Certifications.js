@@ -1,6 +1,7 @@
 'use client'; 
 import PropTypes from 'prop-types';
 import { FaCertificate } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Certifications = ({ certifications }) => (
   <div style={styles.card}>
@@ -8,9 +9,9 @@ const Certifications = ({ certifications }) => (
       <h2 style={styles.heading}>
         <FaCertificate style={styles.icon} /> Certifications
       </h2>
-      <a href="/certifications" style={styles.viewAll}>
-        View All
-      </a>
+      <Link href="/cert" style={styles.viewAll}>
+      View All
+      </Link>
     </div>
 
     <div style={styles.certificationsContainer}>
@@ -51,12 +52,13 @@ const styles = {
     marginBottom: '16px',
   },
   heading: {
-    fontSize: '20px',
+    fontSize: '24px',
     fontWeight: 'bold',
     display: 'flex',
     alignItems: 'center',
   },
   icon: {
+    fontSize: '24px',
     marginRight: '8px',
     color: '#4CAF50',
   },
